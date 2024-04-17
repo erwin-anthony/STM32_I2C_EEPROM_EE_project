@@ -1,0 +1,17 @@
+#请注意.gitignore所在路径，下列的前提是.gitignore在根目录。它只能处理所在路径以及同等级目录下的文件
+#忽略该目录以及目录下的所有文件（包括文件夹）
+Objects/
+Library/
+#   .c  .h是指忽略.c  .h结尾的文件
+#使用 路径+文件名 的方式是忽略特定文件
+User/stm32f10x_conf.h
+Listings/startup_stm32f10x_hd.lst
+/*.uvoptx
+DebugConfig/Target_1_STM32F103VE.dbgconf
+/*.uvguix.Anthony_
+#使用/*是指该文件夹下的所有文件(不包括文件夹本身)
+Start/*
+#在保留上述文件夹的同时。使用！+文件路径+文件名是指取消忽略该文件
+!Start/startup_stm32f10x_hd.s
+!Start/stm32f10x.h
+
